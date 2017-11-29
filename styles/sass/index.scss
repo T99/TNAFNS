@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+$blue: rgb(27, 167, 214);
+
+* {
+	
+	margin: 0px;
+	padding: 0px;
+	
+}
+
+html, body {
+
+	height: 100%;
+	width: 100%;
+
+}
+
+html {
+
+	body {
+		
+		display: flex;
+		flex-direction: column;
+	
+		header {
+		
+			flex: 0 0 auto;
+			height: 100px;
+			background: $blue;
+			
+			.centerer {
+				
+				display: inline-flex;
+				flex-direction: column;
+				justify-content: center;
+				height: 100%;
+				margin-left: 15px;
+				
+				#headertext {
+					
+					flex: 0 0 auto;
+					white-space: pre-line;
+					color: white;
+					font-family: 'Ubuntu', monospace;
+					
+				}
+			
+			}
+		
+		}
+		
+		.content {
+		
+			flex: 1 0 auto;
+			
+			main {
+			
+				height: 100%;
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				right: 0px;
+				bottom: 0px;
+				
+				$margin: 200px;
+				margin: {
+				
+					left: $margin;
+					right: $margin;
+				
+				}
+			
+			}
+		
+		}
+		
+		footer {
+		
+			flex: 0 0 auto;
+			height: 50px;
+			background: $blue;
+		
+		}
+	
+	}
+	
+}
