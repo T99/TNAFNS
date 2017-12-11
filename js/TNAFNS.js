@@ -1,4 +1,4 @@
-function onHover(span) {
+function onHover(span, text) {
 	
 	var bcr = span.getBoundingClientRect();
 	var center = document.documentElement.clientWidth / 2;
@@ -6,26 +6,32 @@ function onHover(span) {
 	var middleY = bcr.top + ((bcr.bottom - bcr.top) / 2);
 	var left = (middleX <= center);
 	var hoverbox;
+	var pElement;
 	
 	if (left) {
 		
 		hoverbox = document.querySelector("div.hoverbox.left");
+		pElement = document.querySelector("div.hoverbox.left p").innerHTML = text;
 		
 		
 	} else {
 		
 		hoverbox = document.querySelector("div.hoverbox.right");
+		pElement = document.querySelector("div.hoverbox.right p").innerHTML = text;
 		
 	}
 	
+	
 	hoverbox.style.top = (middleY - 16) + "px";
 	hoverbox.style.opacity = "1";
+	span.style.background = "yellow";
 	
 }
 
-function onUnHover() {
+function onUnHover(span) {
 	
 	document.querySelector("div.hoverbox.left").style.opacity = "0";
 	document.querySelector("div.hoverbox.right").style.opacity = "0";
+	span.style.background = "#EAEAEA";
 
 }
